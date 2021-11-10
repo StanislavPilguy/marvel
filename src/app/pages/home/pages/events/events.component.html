@@ -1,0 +1,9 @@
+<p>events works!</p>
+<div *ngIf="events$ | async as events; else loader ">
+  <app-card *ngFor="let event of events" [item]="event"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>Loading events....</h2>
+</ng-template>

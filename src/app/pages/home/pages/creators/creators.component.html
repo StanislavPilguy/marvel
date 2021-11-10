@@ -1,0 +1,14 @@
+<p>creators works!</p>
+
+
+<div *ngIf="creators$ | async as creators;else loader">
+
+    <app-card *ngFor="let creator of creators" [item]="creator"></app-card>
+
+</div>
+
+
+
+<ng-template #loader>
+  <h2>Loading creators....</h2>
+</ng-template>

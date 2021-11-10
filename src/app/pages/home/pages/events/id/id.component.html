@@ -1,0 +1,11 @@
+<p>id works!</p>
+
+
+<div *ngIf="event$ | async as event; else loader ">
+  <app-card  [item]="event"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>Loading events....</h2>
+</ng-template>

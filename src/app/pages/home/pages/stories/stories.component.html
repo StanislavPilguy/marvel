@@ -1,0 +1,11 @@
+<p>stories works!</p>
+
+
+<div *ngIf="stories$ | async as stories; else loader">
+  <app-card *ngFor="let storie of stories" [item]="storie"> </app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>loading series...</h2>
+</ng-template>

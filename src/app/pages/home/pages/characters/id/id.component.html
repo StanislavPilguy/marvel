@@ -1,0 +1,11 @@
+<p>id works!</p>
+
+
+<div *ngIf="character$ | async as character; else loader">
+   <app-card [item]="character"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>Loading Character.....</h2>
+</ng-template>

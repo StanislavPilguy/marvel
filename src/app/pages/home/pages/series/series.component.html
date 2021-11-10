@@ -1,0 +1,11 @@
+<p>series works!</p>
+
+
+<div *ngIf="series$ | async as series; else loader">
+ <app-card *ngFor="let serie of series" [item]="serie"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>loading series...</h2>
+</ng-template>

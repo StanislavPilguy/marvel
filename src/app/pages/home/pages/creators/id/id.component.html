@@ -1,0 +1,12 @@
+<p>id works!</p>
+
+
+<div *ngIf="creator$ | async as creator;else loader">
+  <app-card [item]="creator"></app-card>
+</div>
+
+
+
+<ng-template #loader>
+  <h2>Loading creators....</h2>
+</ng-template>

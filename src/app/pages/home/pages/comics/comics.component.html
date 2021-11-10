@@ -1,0 +1,10 @@
+<p>comics works!</p>
+
+<div *ngIf="comics$ | async as comics; else loader">
+    <app-card *ngFor="let comic of comics" [item]="comic"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>loading comics....</h2>
+</ng-template>

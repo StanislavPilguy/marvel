@@ -1,0 +1,9 @@
+<p>id works!</p>
+<div *ngIf="serie$ | async as serie; else loader">
+  <app-card [item]="serie"></app-card>
+</div>
+
+
+<ng-template #loader>
+  <h2>loading series...</h2>
+</ng-template>
